@@ -1,4 +1,4 @@
-# PU_Training_tests
+# PU Training, Positive and Unlabelled training tests
 
 ### [Check out the Jupyter notebook](https://github.com/Magnushhoie/PU_Training_tests/blob/main/PU_Training.ipynb)
 

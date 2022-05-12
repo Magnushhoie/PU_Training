@@ -2,7 +2,7 @@
 
 ### [Check out the Jupyter notebook](https://github.com/Magnushhoie/PU_Training_tests/blob/main/PU_Training.ipynb)
 
-Testing effects of positive and unlabelled training variables
+Testing effects of positive and unlabelled training variables, inspired by [1] and [2]
 
 Findings w/ PU training:
 - Performance is largely the same training on ca 5 % to 100 % of positive examples <img src="https://github.com/Magnushhoie/PU_Training_tests/blob/main/figures/pos_frac.png" width="500">
@@ -16,11 +16,11 @@ Elkan et al claims and proves the probability that a sample is positive is depen
 
 <img src="https://github.com/Magnushhoie/PU_Training_tests/blob/main/figures/formula.png" width="500">
 
-In practice, we start with an imbalanced dataset with few positive samples. Then we take a subset of the positive, e.g. 70 %, and sample equally as many of the remaining positive and negative sambles, setting all labels to negative/unlabelled. Then train our probabilistic classifier. We repeat this process n times to build an ensemble. We then use the ensemble to predict on our test set.
+In practice, we start with an imbalanced dataset with few positive samples. Then we take a subset of the positive, e.g. 70 % and assign them as positive/labelled, and sample equally as many of the remaining positive and negative sambles, assigning them as negative/unlabelled. Then train our probabilistic classifier. We repeat this process n times to build an ensemble, so we can cover most of our dataset. We then use the ensemble to predict on our test set.
 
 <img src="https://github.com/Magnushhoie/PU_Training_tests/blob/main/figures/example_paper.png" width="500">
 
-Nb: Since the constant factor above does not affect our AUC calculation, it can be disregarded if the threshold to set is known. Otherwise it can be set as c/2.
+Nb: Since the constant factor P(s=1|y=1) does not affect our AUC calculation, it can be disregarded if the threshold to set is known. Otherwise it can be set as c/2, as per [2].
 
 # Sources
 - [1] Semi-Supervised Classification of Unlabeled Data (PU Learning) https://towardsdatascience.com/semi-supervised-classification-of-unlabeled-data-pu-learning-81f96e96f7cb

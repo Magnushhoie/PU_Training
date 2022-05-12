@@ -1,4 +1,7 @@
 # PU_Training_tests
+
+### [Check out the Jupyter notebook](https://github.com/Magnushhoie/PU_Training_tests/blob/main/PU_Training.ipynb)
+
 Testing effects of positive and unlabelled training variables
 
 Findings w/ PU training:
